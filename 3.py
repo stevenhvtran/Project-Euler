@@ -24,7 +24,10 @@ def largestPF(number):
     #Find the smallest divisor of number
     #Check if the quotient is prime
     #If it is then return, if not find the next smallest divisor
+    import time
+    start_time = time.time()
     a = 1
     while isPrime(int(number/smallestDiv(a, number))) == False:
         a = smallestDiv(a, number) + 1
     print(number/smallestDiv(a, number))
+    print(time.time() - start_time)
